@@ -2,7 +2,7 @@
 
 import { IoIosClose } from "react-icons/io";
 
-export function Button() {
+export function CloseButton() {
     return (
         <button
             onClick={() => {

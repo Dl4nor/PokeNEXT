@@ -5,7 +5,7 @@ import { IoMenu } from "react-icons/io5";
 export function BurgerButton() {
     return (
         <button
-            className="rounded p-1 absolute -top-1.5 -left-1 
+            className="rounded p-1
                        transition-colors duration-300 ease 
                      hover:bg-red-900/80  
                      "

@@ -1,29 +1,31 @@
+import Link from "next/link";
 import { BurgerButton } from "./_components/burgerbutton";
+import { LogoButton } from "./_components/logobutton";
 
 export function Header() {
     return (
-        <header className="fixed top-0 right-0 left-0 px-6 py-4 bg-red-500/80 text-white">
-            <div className="relative flex items-center justify-end space-x-4">
-                <BurgerButton></BurgerButton>
-                <h1 className="text-xl font-bold absolute -top-0.5 left-20">
-                    PokeWorld
-                </h1>
+        <header className="fixed top-0 right-0 left-0 z-10 bg-red-500/80 text-white">
+            <div className="relative flex items-center px-6 py-4 justify-between space-x-4">
+                <div className="flex items-center space-x-4">
+                    <BurgerButton></BurgerButton>
+                    <LogoButton></LogoButton>
+                </div>
                 <nav>
                     <ul className="flex space-x-4">
                         <li>
-                            <a href="/" className="hover:underline">
+                            <Link href="/" className="hover:underline">
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/about" className="hover:underline">
+                            <Link href="/about" className="hover:underline">
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/contact" className="hover:underline">
+                            <Link href="/contact" className="hover:underline">
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

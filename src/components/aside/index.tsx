@@ -1,9 +1,10 @@
-import { Button } from "./_components/closebutton";
+import { CloseButton } from "./_components/closebutton";
+import Link from "next/link";
 
 export function Aside() {
     return (
         <aside
-            className="fixed top-0 left-0 z-10 h-full min-w-50 bg-gray-800/90 text-white
+            className="fixed top-0 left-0 z-20 h-full min-w-50 bg-gray-800/90 text-white
                        transition-all duration-300 ease-in-out
                        transform -translate-x-full
                        "
@@ -11,18 +12,18 @@ export function Aside() {
             <div className="p-4 space-y-4">
                 <div className="flex items-center justify-between">
                     <h2 className="text-xl font-bold">Filtros</h2>
-                    <Button></Button>
+                    <CloseButton></CloseButton>
                 </div>
                 <ul className="space-y-2">
                     <li>
-                        <a href="/" className="hover:underline">
+                        <Link href="/" className="hover:underline">
                             Tipo
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/about" className="hover:underline">
+                        <Link href="/about" className="hover:underline">
                             Geração
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
