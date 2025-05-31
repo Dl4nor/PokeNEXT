@@ -38,7 +38,7 @@ export async function GETPokemonById(id: string) {
         pokeInfo.flavor_text_entries
             .find((e: any) => e.language.name === "en")
             ?.flavor_text.replace(/[\n\f]/g, " ") ?? "No flavor text found.";
-    const types = pokeInfo.types.map((t: any) => t.type.name);
+    const typesUrl = pokemon.types.map((t: any) => t.type.name);
 
     return {
         id: pokemon.id,
@@ -46,6 +46,6 @@ export async function GETPokemonById(id: string) {
         front_sprite: pokemon.sprites.front_default,
         back_sprite: pokemon.sprites.front_default,
         flavor_text: flavor_text,
-        types: types,
+        types_img: typesUrl,
     };
 }
